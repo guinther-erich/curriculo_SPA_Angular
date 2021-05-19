@@ -1,27 +1,18 @@
-# Spaangular
+# Currículo em SPA Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+Os 3 componentes criados foram:
+- home;
+- corpo; e
+- contato.
 
-## Development server
+Os 4 componentes do Angular Material escolhidos foram:
+- Button (no componente 'contato' com a divisão por cores);
+- Button toggle (nos botões do componente 'contato');
+- Menu item (constante no componente 'home'); e
+- Icons (constantes no componente 'home').
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+As interações criadas foram do tipo interpolação, presentes em:
+- Nas listas do componente 'home'; e
+- Na porcentagem constante no componente 'corpo'.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+O currículo foi feito com base nos conhecimentos passados pela dev Camila Ribeiro para o projeto de criação de SPA em Angular para a Digital Innovation One.
