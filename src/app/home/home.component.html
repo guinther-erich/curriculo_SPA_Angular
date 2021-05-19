@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Frontend</title>
+</head>
+
+<body>
+
+  <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Investe em mim!</button>
+      <button mat-menu-item>Aposta tudo em mim!</button>
+      <button mat-menu-item>Eu prometo te fazer feliz!</button>
+    </mat-menu>
+
+    <span>Me contrata, Avanade!</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <br>
+
+  <div>
+
+    <spa-corpo [valorInicial]="valor"></spa-corpo>
+
+    <button (click)="mudarValor()">Mudar Valor</button>
+    <button (click)="reiniciarValor()">Reiniciar Valor</button>
+    <br>
+    <br>
+    <button (click)="exibirTabela0()">Exibir Formação</button>
+    <button (click)="exibirTabela1()">Exibir Cursos</button>
+    <button (click)="exibirTabela2()">Exibir Bootcamps</button>
+
+  </div>
+
+  <br>
+
+  <table *ngIf="exibeTabela0">
+    <tr>
+      <th>Curso</th>
+      <th>Ano</th>
+      <th>Instituição</th>
+    </tr>
+    <tr *ngFor="let corpo of listaFormacao">
+      <td>{{corpo.nome}}</td>
+      <td>{{corpo.ano}}</td>
+      <td>{{corpo.instituicao}}</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table *ngIf="exibeTabela1">
+    <tr>
+      <th>Curso</th>
+      <th>Ano</th>
+      <th>Instituição</th>
+    </tr>
+    <tr *ngFor="let corpo of listaCursos">
+      <td>{{corpo.nome}}</td>
+      <td>{{corpo.ano}}</td>
+      <td>{{corpo.instituicao}}</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table *ngIf="exibeTabela2">
+    <tr>
+      <th>Bootcamp</th>
+      <th>Ano</th>
+      <th>Instituição</th>
+    </tr>
+    <tr *ngFor="let corpo of listaBootcamps">
+      <td>{{corpo.nome}}</td>
+      <td>{{corpo.ano}}</td>
+      <td>{{corpo.instituicao}}</td>
+    </tr>
+  </table>
+
+  <br>
+
+  <spa-contato></spa-contato>
+
+</body>
+
+</html>
